@@ -1,0 +1,58 @@
+server:
+  address: 0.0.0.0
+
+proxy:
+  title: OHDSI Evidence Sharing
+  logo-url: file:///srv/ohdsi-logo.png
+  heartbeat-rate: 30000
+  heartbeat-timeout: 180000
+  port: 8080
+  default-max-instances: 1
+  authentication: none
+  docker:
+      internal-networking: false
+
+  specs:
+
+  - id: 01_hello
+    display-name: Hello Application
+    container-cmd: [ "R", "-e", "shinyproxy::run_01_hello()" ]
+    container-image: openanalytics/shinyproxy-demo
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 02_SqlDeveloper
+    display-name: SqlRender Developer Application
+    description: This is the OHDSI SqlRender developer application
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SqlDeveloper', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/sqldeveloper:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 03_LegendBasicViewer
+    display-name: OHDSI Legend basic viewer
+    description: This is the OHDSI Legend study basic viewer
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/LegendBasicViewer', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/legendbasicviewer:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 04_OhdsiPredictionTutorial
+    display-name: OHDSI Prediction Tutorial
+    description: This is the OHDSI Prediction Tutorial
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/OhdsiPredictionTutorial', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/ohdsipredictiontutorial:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
