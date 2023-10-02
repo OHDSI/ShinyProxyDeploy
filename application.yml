@@ -14,17 +14,7 @@ proxy:
 
   specs:
 
-  - id: 01_hello
-    display-name: Hello Application
-    container-cmd: [ "R", "-e", "shinyproxy::run_01_hello()" ]
-    container-image: openanalytics/shinyproxy-demo
-    container-volumes:
-      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
-      - "/home/jenkins/minio/data/sp-app-data:/data"
-    container-env:
-      DATABASECONNECTOR_JAR_FOLDER: /root
-
-  - id: 02_SqlDeveloper
+  - id: 01_SqlDeveloper
     display-name: SqlRender Developer Application
     description: This is the OHDSI SqlRender developer application
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SqlDeveloper', host = '0.0.0.0', port = 3838)"]
@@ -35,7 +25,7 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
-  - id: 03_LegendBasicViewer
+  - id: 02_LegendBasicViewer
     display-name: OHDSI Legend basic viewer
     description: This is the OHDSI Legend study basic viewer
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/LegendBasicViewer', host = '0.0.0.0', port = 3838)"]
@@ -46,7 +36,7 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
-  - id: 04_OhdsiPredictionTutorial
+  - id: 03_OhdsiPredictionTutorial
     display-name: OHDSI Prediction Tutorial
     description: This is the OHDSI Prediction Tutorial
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/OhdsiPredictionTutorial', host = '0.0.0.0', port = 3838)"]
