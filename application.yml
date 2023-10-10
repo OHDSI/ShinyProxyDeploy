@@ -46,3 +46,14 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 04_WhatllHappenToMe
+    display-name: Whatll Happen To Me
+    description: Find your personalized risk for hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/WhatllHappenToMe', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/whatllhappentome:1.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
