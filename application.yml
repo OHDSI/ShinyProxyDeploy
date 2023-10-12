@@ -57,3 +57,87 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 05_HowOften_Andreas
+    display-name: How Often Andreas
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_andreas
+
+  - id: 06_HowOften_Azza
+    display-name: How Often Azza
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_azza
+  
+  - id: 07_HowOften_Evan
+    display-name: How Often Evan
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_evan
+
+  - id: 08_HowOften_George
+    display-name: How Often George
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_george
+      
+  - id: 09_HowOften_Gowza
+    display-name: How Often Gowza
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_gowza
+      
+  - id: 10_HowOften_Joel
+    display-name: How Often Gowza
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_joel
+            
+  - id: 11_HowOften_overall
+    display-name: How Often overall
+    description: Incidence of hundreds of outcomes
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/howoften:0.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+      RESULT_DATABASE_SCHEMA: howoften_overall
