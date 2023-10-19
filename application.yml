@@ -145,7 +145,7 @@ proxy:
   - id: 12_HowOften_Db_diagnostics
     display-name: How Often Db Diagnostics
     description: Database diagnostics for how often study
-    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften_Db_Diagnostics', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/howoften_db_diagnostics:0.0.1
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
