@@ -62,7 +62,7 @@ proxy:
     display-name: How Often Andreas
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -74,7 +74,7 @@ proxy:
     display-name: How Often Azza
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -86,7 +86,7 @@ proxy:
     display-name: How Often Evan
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -98,7 +98,7 @@ proxy:
     display-name: How Often George
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -110,7 +110,7 @@ proxy:
     display-name: How Often Gowza
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -122,7 +122,7 @@ proxy:
     display-name: How Often Joel
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -134,7 +134,7 @@ proxy:
     display-name: How Often overall
     description: Incidence of hundreds of outcomes
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/howoften:0.0.6
+    container-image: ohdsi/howoften:0.0.7
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
