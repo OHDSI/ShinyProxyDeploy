@@ -5,7 +5,7 @@ proxy:
   title: OHDSI Evidence Sharing
   logo-url: file:///srv/ohdsi-logo.png
   heartbeat-rate: 30000
-  heartbeat-timeout: 180000
+  heartbeat-timeout: 900000
   port: 8080
   default-max-instances: 1
   authentication: none
