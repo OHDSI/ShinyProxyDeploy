@@ -157,7 +157,5 @@ proxy:
   - id: 13_DiagnosticsExplorerDemo
     display-name: Diagnostics Explorer Demo
     description: Demo of the diagnostics explorer app
-    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/diagnosticsexplorer:3.2.5
-    container-volumes:
-      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
