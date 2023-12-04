@@ -161,4 +161,3 @@ proxy:
     container-image: ohdsi/diagnosticsexplorer:3.2.5
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
-      - "/home/jenkins/minio/data/sp-app-data:/data"
