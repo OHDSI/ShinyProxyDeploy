@@ -159,3 +159,15 @@ proxy:
     description: Demo of the diagnostics explorer app
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/diagnosticsexplorer:3.2.5
+
+  - id: 14_UveitisSafetyOutcomes
+    display-name: Uveitis Safety Outcomes
+    description: Cohort Diagnostics
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/outcomes', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/uvetis_safety:1.0.0
+
+  - id: 15_UveitisSafetyIndications
+    display-name: Uveitis Safety Indications
+    description: Cohort Diagnostics
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/indications', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/uvetis_safety:1.0.0
