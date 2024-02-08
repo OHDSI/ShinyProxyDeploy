@@ -178,7 +178,7 @@ proxy:
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/phepheb2024:1.0.0
     container-env:
-      - APP_CONFIG_PATH=alzh.config.yml
+      - APP_CONFIG_PATH: alzh.config.yml
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
