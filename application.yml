@@ -192,3 +192,13 @@ proxy:
     container-env:
       TABLE_PREFIX: mdd_
 
+  - id: 18_PhenotypePhebPah
+    display-name: Phenotype Phebruary PAH
+    description: Cohort Diagnostics
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/phepheb2024:1.0.5
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      TABLE_PREFIX: pah_
