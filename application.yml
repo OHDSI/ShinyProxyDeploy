@@ -224,4 +224,15 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
-  
+
+  - id: 21_Semanaion_Est
+    display-name: Semaglutide NAION population level estimation results
+    description: Population level estimation
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SemaglutideNaionEstApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/semaglutidenaionestapp:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+    
