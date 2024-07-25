@@ -218,7 +218,7 @@ proxy:
     display-name: Semaglutide NAION characterization results
     description: Cohort Characterization
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SemaglutideNaionCharApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/semaglutidenaioncharapp:1.0.2
+    container-image: ohdsi/semaglutidenaioncharapp:1.0.3
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
@@ -229,7 +229,7 @@ proxy:
     display-name: Semaglutide NAION population level estimation results
     description: Population level estimation
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SemaglutideNaionEstApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/semaglutidenaionestapp:1.0.0
+    container-image: ohdsi/semaglutidenaionestapp:1.0.1
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
