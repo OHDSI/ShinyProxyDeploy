@@ -229,7 +229,7 @@ proxy:
     display-name: Semaglutide NAION population level estimation results
     description: Population level estimation
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SemaglutideNaionEstApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/semaglutidenaionestapp:main
+    container-image: ohdsi/semaglutidenaionestapp:1.0.4
     
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
