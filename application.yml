@@ -237,3 +237,15 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
     
+  - id: 22_ohdsi_analysis_viewer_app_demo
+    display-name: OHDSI Analysis Viewer Demo (2024)
+    description: OHDSI Analysis Viewer Demo (2024)
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/ohdsianalysisviewerdemoapp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/ohdsianalysisviewerdemoapp:1.0.0
+    
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+    
