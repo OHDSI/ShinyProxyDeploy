@@ -253,7 +253,7 @@ proxy:
     display-name: OHDSI Tutorial Demo 2024
     description: This is the OHDSI Tutorial demo for 2024
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/TutorialDemo2024', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/tutorialdemo2024:0.0.2
+    container-image: ohdsi/tutorialdemo2024:0.0.3
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
