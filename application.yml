@@ -190,7 +190,7 @@ proxy:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
-      TABLE_PREFIX: mdd2_
+      TABLE_PREFIX: mdd_
 
   - id: 18_PhenotypePhebPah
     display-name: Phenotype Phebruary PAH
