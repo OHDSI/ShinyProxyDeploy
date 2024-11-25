@@ -264,7 +264,7 @@ proxy:
     display-name: GLP-1 & Acute liver injury
     description: GLP-1 receptor agonists and subsequent risk of acute liver injury
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/Glp1DiliApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/glp1diliapp:1.0.1
+    container-image: ohdsi/glp1diliapp:1.0.2
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
