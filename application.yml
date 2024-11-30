@@ -274,7 +274,7 @@ proxy:
   - id: 25_EstimationTutorial
     display-name: Estimation Tutorial
     description: CohortMethod and SelfControlledCaseSeries tutorial for population-level estimation
-    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/Glp1DiliApp', host = '0.0.0.0', port = 3838)"]
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/EstimationTutorial', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/estimationtutorial:0.0.1
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
