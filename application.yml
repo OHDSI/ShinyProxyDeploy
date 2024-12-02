@@ -286,4 +286,4 @@ proxy:
     display-name: Uveitis Safety Estimation
     description: Uveitis Safety Estimation results 
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/UveitisSafetyEstimationApp:1.0.0
+    container-image: ohdsi/uveitis_safety_estimation_app:1.0.0
