@@ -261,10 +261,10 @@ proxy:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
   - id: 24_Glp1Dili
-    display-name: GLP-1 & Acute liver injury
-    description: GLP-1 receptor agonists and subsequent risk of acute liver injury
+    display-name: GLP-1RA and acute liver injury
+    description: Population level estimation
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/Glp1DiliApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/glp1diliapp:1.0.3
+    container-image: ohdsi/glp1diliapp:1.0.5
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
