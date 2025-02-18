@@ -286,7 +286,7 @@ proxy:
     display-name: Phenotype Phebruary 2025
     description: Shiny app for Phenotype Phebruary 2025
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/PhenotypePhebruary2025CohortDiagnostics', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/diagnosticsexplorer:3.2.5
+    container-image: ohdsi/diagnosticsexplorer:3.3.0
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
