@@ -282,7 +282,7 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
-  - id: 26_PhenotypePhebruary2025
+  - id: 26_PhenotypePhebruary2025CohortDiagnostics
     display-name: Phenotype Phebruary 2025
     description: Shiny app for Phenotype Phebruary 2025
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/EstimationTutorial', host = '0.0.0.0', port = 3838)"]
