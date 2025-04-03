@@ -298,3 +298,5 @@ proxy:
     description: Shiny app to host benchmark results generated with PLP
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/PlpBenchmarkResults', host = '0.0.0.0', port = 3838)"]
     container-image: solis9753/plpbenchmarkresults:0.0.2
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
