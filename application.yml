@@ -305,7 +305,7 @@ proxy:
     display-name: OHDSI Example Study
     description: The OHDSI Example Study is designed to run across the OHDSI Evidence Network to provide a way to test Strategus and all HADES modules.
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/OhdsiExampleStudyApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/ohdsiexamplestudyapp:1.0.1
+    container-image: ohdsi/ohdsiexamplestudyapp:1.0.2
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
