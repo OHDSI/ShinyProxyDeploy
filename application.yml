@@ -311,3 +311,14 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 29_Gde2025DiabeticRetinopathyScreening
+    display-name: Gde2025DiabeticRetinopathyScreening
+    description: Gde2025DiabeticRetinopathyScreening
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/OhdsiExampleStudyApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/gde2025diabeticretinopathyscreeningapp:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
