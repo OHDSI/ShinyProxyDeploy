@@ -323,10 +323,10 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
-  - id: 30_t2dmHteApp
-    display-name: t2dmHteApp
-    description: t2dmHteApp
-    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/t2dmHteApp', host = '0.0.0.0', port = 3838)"]
+  - id: 30_T2dmHteApp
+    display-name: T2dmHteApp
+    description: T2dmHteApp
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/T2dmHteApp', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/t2dmhteapp:1.0.0
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
