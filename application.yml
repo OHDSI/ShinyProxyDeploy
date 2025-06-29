@@ -333,3 +333,14 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 31_RweCuimcApp
+    display-name: RweCuimcApp
+    description: RweCuimcApp
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/RweCuimcApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/rwecuimcApp:1.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
