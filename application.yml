@@ -338,7 +338,7 @@ proxy:
     display-name: RweCuimcApp
     description: RweCuimcApp
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/RweCuimcApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/rwecuimcapp:1.0.3
+    container-image: ohdsi/rwecuimcapp:1.0.5
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
