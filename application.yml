@@ -344,3 +344,14 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
+
+  - id: 32_TutorialHades
+    display-name: Hades Tutorial App
+    description: An example results viewer for the HADES Tutorial
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/TutorialHades', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/tutorialhades:1.0.6
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
