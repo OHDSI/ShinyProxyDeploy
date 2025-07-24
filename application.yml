@@ -356,3 +356,14 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
+  - id: 33_SemaNvamdApp
+    display-name: Semaglutide Nvamd App
+    description: Semaglutide Nvamd App
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/SemaNvamdApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/semanvamdapp:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
