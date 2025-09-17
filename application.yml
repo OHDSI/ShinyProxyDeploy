@@ -367,3 +367,11 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
+  - id: 34_ComparatorSelectionExplorer
+    display-name: Comparator Selection Explorer
+    description: CohortMethod comparator selection utility
+    container-cmd: ["R", "-e", "source('/srv/shiny-server/app.R')"]
+    container-image: ohdsi/comparatorselectionexplorer:1.0.0
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
