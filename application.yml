@@ -372,6 +372,9 @@ proxy:
     description: CohortMethod comparator selection utility
     container-cmd: ["R", "-e", "source('/srv/shiny-server/app.R')"]
     container-image: ohdsi/comparatorselectionexplorer:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
