@@ -371,7 +371,7 @@ proxy:
     display-name: Comparator Selection Explorer
     description: CohortMethod comparator selection utility
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/app.R', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/comparatorselectionexplorer:1.0.2
+    container-image: ohdsi/comparatorselectionexplorer:1.0.3
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
