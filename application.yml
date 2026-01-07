@@ -316,7 +316,7 @@ proxy:
     display-name: Gde2025DiabeticRetinopathyScreening
     description: Gde2025DiabeticRetinopathyScreening
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/Gde2025DiabeticRetinopathyScreeningApp', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/gde2025diabeticretinopathyscreeningapp:1.0.0
+    container-image: ohdsi/gde2025diabeticretinopathyscreeningapp:1.0.1
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
