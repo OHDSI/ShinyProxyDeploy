@@ -378,3 +378,14 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
+  - id: 35_KeeperExampleApp
+    display-name: Keeper Example App
+    description: Keeper Example App for RA 
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/KeeperExampleApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/keeperexampleapp:1.0.0
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
+
