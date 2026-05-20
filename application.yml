@@ -94,9 +94,9 @@ proxy:
       DATABASECONNECTOR_JAR_FOLDER: /root
       RESULT_DATABASE_SCHEMA: howoften_evan
 
-  - id: 08_HowOften_George
-    display-name: How Often George
-    description: Incidence of hundreds of outcomes
+  - id: 08_HowOften_Indication
+    display-name: How Often Indication
+    description: Incidence rates of 73 health outcomes across 7 drug classes, 13 databases, and multiple treatment indications.
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/HowOften', host = '0.0.0.0', port = 3838)"]
     container-image: ohdsi/howoften:0.0.6
     container-volumes:
