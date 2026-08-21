@@ -389,5 +389,15 @@ proxy:
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
 
+  - id: 36_ProstateCancerVteIncidenceApp
+    display-name: Prostate Cancer VTE Incidence App
+    description: Prostate Cancer VTE Incidence App
+    container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/ProstateCancerVteIncidenceApp', host = '0.0.0.0', port = 3838)"]
+    container-image: ohdsi/prostatecancervteincidenceapp:1.0.1
+    container-volumes:
+      - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
+      - "/home/jenkins/minio/data/sp-app-data:/data"
+    container-env:
+      DATABASECONNECTOR_JAR_FOLDER: /root
 
 
