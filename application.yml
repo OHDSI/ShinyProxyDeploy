@@ -410,4 +410,4 @@ proxy:
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root
-      RESULT_DATABASE_SCHEMA: can_build_results
+      RESULT_DATABASE_SCHEMA: skeletoncohortdiagnosticsstudy
