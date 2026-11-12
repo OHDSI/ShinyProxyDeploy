@@ -404,10 +404,9 @@ proxy:
     display-name: Can-BUILD
     description: Can-BUILD study results viewer
     container-cmd: ["R", "-e", "shiny::runApp('/srv/shiny-server/', host = '0.0.0.0', port = 3838)"]
-    container-image: ohdsi/can-build-app:1.0.1
+    container-image: ohdsi/can-build-app:1.0.2
     container-volumes:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
       DATABASECONNECTOR_JAR_FOLDER: /root/
-      RESULT_DATABASE_SCHEMA: skeletoncohortdiagnosticsstudy
