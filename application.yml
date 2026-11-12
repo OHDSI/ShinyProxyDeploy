@@ -409,5 +409,5 @@ proxy:
       - "/home/jenkins/shinyproxy/.Renviron:/root/.Renviron"
       - "/home/jenkins/minio/data/sp-app-data:/data"
     container-env:
-      DATABASECONNECTOR_JAR_FOLDER: /root
+      DATABASECONNECTOR_JAR_FOLDER: /root/
       RESULT_DATABASE_SCHEMA: skeletoncohortdiagnosticsstudy
